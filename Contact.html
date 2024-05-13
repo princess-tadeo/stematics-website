@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+     <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://source.unsplash.com/1600x900/?nature');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+        /* Header Styles */
+        header {
+            background-color: rgba(192, 192, 192, 0.7);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(192, 192, 192, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Sidebar Button Styles */
+        .sidebar-button {
+            background-color: rgba(169, 169, 169, 0.7);
+            color: #333;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        .sidebar-button:hover {
+            background-color: rgba(169, 169, 169, 0.9);
+        }
+
+        /* Side Navigation Styles */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: -250px;
+            background-color: rgba(255, 255, 255, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #007bff;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .Location-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            max-width: 600px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1;
+            color: #333;
+        }
+
+        .Location-box h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .Location-box p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+    </header>
+    <button class="sidebar-button" onclick="openSidebar()">&#9776; Explore</button>
+    <div class="sidebar" id="sidebar">
+        <a href="STEMatics.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="About.html">About</a>
+        <a href="Author.html">Author</a>
+        <a href="Location.html">Location</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    </div>
+    <div class="Location-box">
+        <h2>Contact me:</h2>
+        <p><i class="fab fa-facebook"></i> Facebook: Princess Nicole Lanuza Tadeo</p>
+        <p><i class="far fa-envelope"></i> Email: princesstadeo3003@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Contact: 0977-784-0095</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 STEMatics. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.left = "0";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.left = "-250px";
+        }
+    </script>
+</body>
+</html>

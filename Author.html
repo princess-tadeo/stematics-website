@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author</title>
+     <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://source.unsplash.com/1600x900/?nature'); /* Replace 'https://example.com/your-image.jpg' with the URL of your chosen image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+        /* Header Styles */
+        header {
+            background-color: rgba(192, 192, 192, 0.7); /* Semi-transparent light gray header */
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            position: relative; /* Added for positioning the search bar */
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(192, 192, 192, 0.7); /* Semi-transparent light gray footer */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Sidebar Button Styles */
+        .sidebar-button {
+            background-color: rgba(169, 169, 169, 0.7); /* Semi-transparent gray button */
+            color: #333;
+            padding: 15px 30px; /* Increased padding for larger button */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        .sidebar-button:hover {
+            background-color: rgba(169, 169, 169, 0.9); /* Lighter gray on hover */
+        }
+
+        /* Side Navigation Styles */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: -250px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #007bff; /* Blue color on hover */
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .Author-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; /* Adjusted width */
+            max-width: 800px; /* Limit maximum width for better readability */
+            padding: 30px; /* Increased padding for better spacing */
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1;
+            color: #333; /* Text color */
+        }
+
+        .Author-box h2 {
+            font-size: 28px; /* Increased font size for the heading */
+            margin-bottom: 20px; /* Increased margin for better separation */
+            color: #333; /* Text color */
+        }
+
+        .Author-box p {
+            font-size: 18px; /* Increased font size for the paragraphs */
+            margin-bottom: 15px; /* Increased margin bottom for better separation */
+            color: #555; /* Changed text color to a slightly darker shade */
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Author</h1>
+    </header>
+    <button class="sidebar-button" onclick="openSidebar()">&#9776; Explore</button>
+    <div class="sidebar" id="sidebar">
+        <a href="STEMatics.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="About.html">About</a>
+        <a href="Location.html">Location</a>
+        <a href="Contact.html">Contact</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    </div>
+    <div class="Author-box">
+        <h2>About the author:</h2>
+        <p>Hello, I'm Princess Nicole L. Tadeo, a Grade 12 STEM student residing in the Philippines. Currently studying at St. Jude Parish School Inc. in Trece Martires City, Cavite, I'm passionate about exploring the realms of science, technology, engineering, and mathematics. At 17 years old, born on March 30, 2006, I embrace the challenges and excitement of learning, driven by curiosity and a thirst for knowledge. I find joy in unraveling the mysteries of the universe and engaging in hands-on experiments to deepen my understanding. With a heart filled with ambition and a mind eager to innovate, I'm on a journey of discovery and growth, seeking to make a positive impact on the world around me.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 STEMatics. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.left = "0";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.left = "-250px";
+        }
+    </script>
+</body>
+</html>

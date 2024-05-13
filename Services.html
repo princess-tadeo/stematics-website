@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+     <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://source.unsplash.com/1600x900/?nature'); /* Replace 'https://example.com/your-image.jpg' with the URL of your chosen image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+        /* Header Styles */
+        header {
+            background-color: rgba(192, 192, 192, 0.7); /* Semi-transparent light gray header */
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            position: relative; /* Added for positioning the search bar */
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(192, 192, 192, 0.7); /* Semi-transparent light gray footer */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Sidebar Button Styles */
+        .sidebar-button {
+            background-color: rgba(169, 169, 169, 0.7); /* Semi-transparent gray button */
+            color: #333;
+            padding: 15px 30px; /* Increased padding for larger button */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        .sidebar-button:hover {
+            background-color: rgba(169, 169, 169, 0.9); /* Lighter gray on hover */
+        }
+
+        /* Side Navigation Styles */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: -250px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #007bff; /* Blue color on hover */
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .services-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%; /* Adjusted width */
+            max-width: 800px; /* Added max-width for responsiveness */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1;
+        }
+
+        .services-box h2 {
+            font-size: 20px; /* Decreased font size */
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .services-box p {
+            font-size: 14px; /* Decreased font size */
+            margin-bottom: 0;
+            color: #333;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Services</h1>
+    </header>
+    <button class="sidebar-button" onclick="openSidebar()">&#9776; Explore</button>
+    <div class="sidebar" id="sidebar">
+        <a href="STEMatics.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Author.html">Author</a>
+        <a href="Location.html">Location</a>
+        <a href="Contact.html">Contact</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    </div>
+    <div class="services-box">
+        <h2>What We Offer:</h2>
+        <p>Educational Resources: Dive into our extensive collection of articles, tutorials, videos, and interactive activities covering a wide range of STEM topics. Whether you're a student, educator, or lifelong learner, you'll find something to spark your interest and expand your knowledge.</p>
+        <p>Hands-On Projects: Get hands-on with our fun and challenging STEM projects designed to inspire creativity and problem-solving skills. From building robots to conducting experiments, there's no limit to what you can create and discover.</p>
+        <p>Expert Advice: Learn from industry experts and professionals who share their insights, tips, and advice on navigating the world of STEM careers, education, and research. Gain valuable perspectives and guidance to help you succeed in your STEM journey.</p>
+        <p>Community Engagement: Connect with like-minded individuals in our vibrant STEM community. Share your ideas, collaborate on projects, and participate in discussions to deepen your understanding and make meaningful connections with others who share your passion for STEM.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 STEMatics. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.left = "0";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.left = "-250px";
+        }
+    </script>
+</body>
+</html>
