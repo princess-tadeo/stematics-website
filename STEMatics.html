@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEMatics</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://source.unsplash.com/1600x900/?nature'); /* Replace 'https://example.com/your-image.jpg' with the URL of your chosen image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+        /* Header Styles */
+        header {
+            background-color: rgba(192, 192, 192, 0.7); /* Semi-transparent light gray header */
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            position: relative; /* Added for positioning the search bar */
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        /* Search Bar Styles */
+        .search-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .search-container input[type=text] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            background: #f1f1f1;
+        }
+        .search-container button {
+            padding: 10px;
+            background: #ddd;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+        .search-container button:hover {
+            background: #ccc;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(192, 192, 192, 0.7); /* Semi-transparent light gray footer */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Sidebar Button Styles */
+        .sidebar-button {
+            background-color: rgba(169, 169, 169, 0.7); /* Semi-transparent gray button */
+            color: #333;
+            padding: 15px 30px; /* Increased padding for larger button */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        .sidebar-button:hover {
+            background-color: rgba(169, 169, 169, 0.9); /* Lighter gray on hover */
+        }
+
+        /* Side Navigation Styles */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: -250px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #007bff; /* Blue color on hover */
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>STEMatics</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+    <button class="sidebar-button" onclick="openSidebar()">&#9776; Explore</button>
+    <div class="sidebar" id="sidebar">
+        <a href="Services.html">Services</a>
+        <a href="About.html">About</a>
+        <a href="Author.html">Author</a>
+        <a href="Location.html">Location</a>
+        <a href="Contact.html">Contact</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    </div>
+    <button onclick="window.location.href='more....html'" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 50px; font-size: 18px; background-color: #a9a9a9; color: #333; border: none; cursor: pointer;">Learn more...</button>
+    <footer>
+        <p>&copy; 2024 STEMatics. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.left = "0";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.left = "-250px";
+        }
+    </script>
+</body>
+</html>
