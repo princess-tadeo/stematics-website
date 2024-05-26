@@ -10,20 +10,22 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://source.unsplash.com/1600x900/?nature'); /* Replace 'https://example.com/your-image.jpg' with the URL of your chosen image */
+            background-image: url('https://source.unsplash.com/1600x900/?nature');
             background-size: cover;
             background-repeat: no-repeat;
             color: #333;
         }
+
         /* Header Styles */
         header {
-            background-color: rgba(192, 192, 192, 0.7); /* Semi-transparent light gray header */
+            background-color: rgba(192, 192, 192, 0.7);
             color: white;
             text-align: center;
             padding: 40px 0;
             margin-bottom: 30px;
-            position: relative; /* Added for positioning the search bar */
+            position: relative;
         }
+
         h1 {
             font-size: 48px;
             font-weight: bold;
@@ -39,6 +41,7 @@
             display: flex;
             align-items: center;
         }
+
         .search-container input[type=text] {
             padding: 10px;
             font-size: 16px;
@@ -46,6 +49,7 @@
             border-radius: 5px 0 0 5px;
             background: #f1f1f1;
         }
+
         .search-container button {
             padding: 10px;
             background: #ddd;
@@ -54,13 +58,14 @@
             cursor: pointer;
             border-radius: 0 5px 5px 0;
         }
+
         .search-container button:hover {
             background: #ccc;
         }
 
         /* Footer Styles */
         footer {
-            background-color: rgba(192, 192, 192, 0.7); /* Semi-transparent light gray footer */
+            background-color: rgba(192, 192, 192, 0.7);
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -68,15 +73,16 @@
             bottom: 0;
             width: 100%;
         }
+
         footer p {
             margin: 0;
         }
 
         /* Sidebar Button Styles */
         .sidebar-button {
-            background-color: rgba(169, 169, 169, 0.7); /* Semi-transparent gray button */
+            background-color: rgba(169, 169, 169, 0.7);
             color: #333;
-            padding: 15px 30px; /* Increased padding for larger button */
+            padding: 15px 30px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
@@ -86,8 +92,9 @@
             left: 20px;
             z-index: 1;
         }
+
         .sidebar-button:hover {
-            background-color: rgba(169, 169, 169, 0.9); /* Lighter gray on hover */
+            background-color: rgba(169, 169, 169, 0.9);
         }
 
         /* Side Navigation Styles */
@@ -98,7 +105,7 @@
             z-index: 1;
             top: 0;
             left: -250px;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            background-color: rgba(255, 255, 255, 0.9);
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 60px;
@@ -114,7 +121,7 @@
         }
 
         .sidebar a:hover {
-            color: #007bff; /* Blue color on hover */
+            color: #007bff;
         }
 
         .sidebar .closebtn {
@@ -125,6 +132,10 @@
             margin-left: 50px;
         }
 
+        /* Custom Style */
+        .Activity-box h2 {
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -136,6 +147,10 @@
         </div>
     </header>
     <button class="sidebar-button" onclick="openSidebar()">&#9776; Explore</button>
+    <div class="Activity-box">
+        <h2>What is STEM?</h2>
+        <a href="https://youtu.be/_69QlJJqBjU?si=Q8GMZmQ1lBjRqznD">Click here.</a>
+    </div>
     <div class="sidebar" id="sidebar">
         <a href="Services.html">Services</a>
         <a href="About.html">About</a>
